@@ -10,11 +10,11 @@ exports.handler = async function (event, context) {
         };
     }
 
-    // 리디렉션을 수행
+    // 리디렉션을 수행 (naver.com으로)
     return {
         statusCode: 301,
         headers: {
-            Location: 'http://naver.com/', // 리디렉션할 URL
+            Location: 'https://naver.com/', // 리디렉션할 URL을 naver.com으로 변경
         },
     };
 };
