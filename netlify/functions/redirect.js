@@ -1,4 +1,4 @@
-// netlify/functions/redirect.js
+// functions/redirect.js
 exports.handler = async function (event, context) {
     const { headers } = event;
 
