@@ -16,7 +16,7 @@
     <script>
         document.getElementById('no-credential-link').addEventListener('click', function (event) {
             event.preventDefault();
-            window.location.href = '/.netlify/functions/redirect?credential=none';  // credential 없음
+            window.location.href = '/.netlify/functions/redirect';  // credential 없음
         });
 
         document.getElementById('with-credential-link').addEventListener('click', function (event) {
