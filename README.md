@@ -70,4 +70,26 @@ exports.handler = async function (event, context) {
 - credential 파라미터가 'naver'일 경우, 301 Moved Permanently 상태 코드와 함께 https://naver.com/으로 리디렉션합니다.
 - 다른 값이거나 credential 파라미터가 없을 경우, 403 Unauthorized 상태 코드와 함께 오류 메시지를 반환합니다.
 
+
+## 외부(앱)에서 참고시
+ - 외부 페이지에서 credential 값에 맞는 리디렉션 호출
+``` javascript
+function redirectToPage(credential) {
+    fetch('https://paris-redirect.netlify.app/.netlify/functions/redirect?credential=' + credential)
+        .then(response => {
+            if (response.status === 301) {
+                window.location.href = response.headers.get('Location');
+            } else {
+                alert('Unauthorized');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// 예시: credential이 'naver'일 경우 리디렉션
+redirectToPage('naver');
+```
+
   
