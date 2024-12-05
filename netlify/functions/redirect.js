@@ -14,7 +14,7 @@ exports.handler = async function (event, context) {
     return {
         statusCode: 301,
         headers: {
-            Location: 'https://naver.com/', // 리디렉션할 URL을 naver.com으로 변경
+            Location: 'https://naranja.my', // 리디렉션할 URL을 naver.com으로 변경
         },
     };
 };
