@@ -2,11 +2,11 @@ exports.handler = async function (event, context) {
     const params = event.queryStringParameters || {};
     const credential = params.credential;
 
-    if (credential === 'naver') {
+    if (credential === 'chatbot') {
         return {
             statusCode: 301,
             headers: {
-                Location: 'https://naver.com/',  // 리디렉션할 URL을 naver.com으로 변경
+                Location: 'http://pf.kakao.com/_xfWbRn',  // 리디렉션할 URL을 naver.com으로 변경
             },
         };
     } else {
