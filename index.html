@@ -44,7 +44,8 @@
             })
                 .then(response => {
                     if (response.status === 301) {
-                        window.location.href = response.headers.get('Location');
+                        // window.location.href = response.headers.get('Location');
+                        window.open(response.headers.get('Location'), '_blank');
                     } else {
                         alert('Unauthorized');
                     }
