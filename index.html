@@ -20,37 +20,18 @@
         // Credential이 없는 링크
         document.getElementById('no-credential-link').addEventListener('click', function (event) {
             event.preventDefault();
-            fetch('/.netlify/functions/redirect', {
-                method: 'GET',
-                headers: {}
-            })
-                .then(response => {
-                    if (response.status === 301) {
-                        window.location.href = response.headers.get('Location');
-                    } else {
-                        alert('Unauthorized');
-                    }
-                });
+            window.location.href = '/.netlify/functions/redirect';  // 서버에서 리디렉션을 처리
         });
 
         // Credential이 있는 링크
         document.getElementById('with-credential-link').addEventListener('click', function (event) {
             event.preventDefault();
-            fetch('/.netlify/functions/redirect', {
-                method: 'GET',
-                headers: {
-                    'Credential': 'naver'  // 헤더에 'Credential: naver' 추가
-                }
-            })
-                .then(response => {
-                    if (response.status === 301) {
-                        window.location.href = response.headers.get('Location');
-                    } else {
-                        alert('Unauthorized');
-                    }
-                });
+            // 서버에서 리디렉션을 처리하고 자동으로 이동
+            window.location.href = '/.netlify/functions/redirect?credential=naver'; // Credential 추가
         });
     </script>
+
+
 </body>
 
 </html>
