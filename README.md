@@ -5,8 +5,9 @@
 ## 프로젝트 구조
 ```bash
 ├── project-root
+│   ├── index.html
 │   ├── netlify
-|   └── redirect.js
+│   │   ├── redirect.js
 
 ```
 
