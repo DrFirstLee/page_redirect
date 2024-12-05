@@ -3,12 +3,12 @@
 이 프로젝트는 **Netlify 서버리스 함수**를 이용해 **Credential** 값을 쿼리 파라미터로 전달하고, 해당 값에 따라 **리디렉션**을 수행하는 예제입니다. 두 가지 링크가 제공되며, 각각 **Credential이 없는 링크**와 **Credential이 있는 링크**로 이동합니다.
 
 ## 프로젝트 구조
-/project-root │ 
-│ ├── index.html # Credential 테스트 페이지 
-└── netlify/ 
-└── functions/
-└── redirect.js # Netlify 서버리스 함수
+```bash
+├── project-root
+│   ├── netlify
+|   └── redirect.js
 
+```
 
 ### index.html
 
